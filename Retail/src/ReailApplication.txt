@@ -1,0 +1,39 @@
+├── controller/           # Handles API requests and responses
+│   ├── ProductController.java
+│   ├── OrderController.java
+│   ├── UserController.java
+│   ├── CartController.java
+├── model/                # Entity classes (JPA models)
+│   ├── Product.java
+│   ├── Order.java
+│   ├── OrderItem.java
+│   ├── Cart.java
+│   ├── User.java
+│   ├── Payment.java
+├── repository/           # Interfaces for DB access (Spring Data JPA)
+│   ├── ProductRepository.java
+│   ├── OrderRepository.java
+│   ├── CartRepository.java
+│   ├── UserRepository.java
+├── service/              # Business logic layer
+│   ├── ProductService.java
+│   ├── OrderService.java
+│   ├── CartService.java
+│   ├── UserService.java
+│   ├── PaymentService.java
+├── dto/                  # Data Transfer Objects (DTOs)
+│   ├── ProductDto.java
+│   ├── OrderDto.java
+│   ├── CartDto.java
+│   ├── UserDto.java
+├── exception/            # Custom exceptions for error handling
+│   ├── ProductNotFoundException.java
+│   ├── UserNotFoundException.java
+│   ├── OrderNotFoundException.java
+│   ├── GlobalExceptionHandler.java
+├── config/               # Configurations (e.g., security, CORS)
+│   ├── SecurityConfig.java
+│   ├── WebConfig.java
+├── RetailApplication.java # Main Spring Boot application class
+└── utils/                 # Utility classes (e.g., payment gateway integrations)
+│   ├── PaymentUtil.java

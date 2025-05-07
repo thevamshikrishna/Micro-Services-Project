@@ -1,0 +1,38 @@
+2025-05-07T11:32:36.579+05:30  INFO 11728 --- [RetailApplication] [main] c.m.RetailApplication.RetailApplication  : Starting RetailApplication using Java 17.0.13 with PID 11728 (C:\Users\VamshiNallavalli\OneDrive - Atyeti Inc\Vamshi_Disc\Training\Assignments\Mentor Assignment\Projects\Retail\target\classes started by VamshiNallavalli in C:\Users\VamshiNallavalli\OneDrive - Atyeti Inc\Vamshi_Disc\Training\Assignments\Mentor Assignment\Projects\Retail)
+2025-05-07T11:32:36.607+05:30  INFO 11728 --- [RetailApplication] [main] c.m.RetailApplication.RetailApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T11:32:38.765+05:30  INFO 11728 --- [RetailApplication] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T11:32:38.999+05:30  INFO 11728 --- [RetailApplication] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 192 ms. Found 4 JPA repository interfaces.
+2025-05-07T11:32:40.452+05:30  INFO 11728 --- [RetailApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T11:32:40.478+05:30  INFO 11728 --- [RetailApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T11:32:40.479+05:30  INFO 11728 --- [RetailApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T11:32:41.010+05:30  INFO 11728 --- [RetailApplication] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-07T11:32:41.027+05:30  INFO 11728 --- [RetailApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T11:32:41.027+05:30  INFO 11728 --- [RetailApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4219 ms
+2025-05-07T11:32:41.503+05:30  INFO 11728 --- [RetailApplication] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T11:32:41.678+05:30  INFO 11728 --- [RetailApplication] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-07T11:32:41.797+05:30  INFO 11728 --- [RetailApplication] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T11:32:42.621+05:30  INFO 11728 --- [RetailApplication] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T11:32:42.725+05:30  INFO 11728 --- [RetailApplication] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T11:32:43.421+05:30  INFO 11728 --- [RetailApplication] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e2109fe
+2025-05-07T11:32:43.425+05:30  INFO 11728 --- [RetailApplication] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T11:32:43.534+05:30  WARN 11728 --- [RetailApplication] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-07T11:32:43.536+05:30  WARN 11728 --- [RetailApplication] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-07T11:32:43.595+05:30  INFO 11728 --- [RetailApplication] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T11:32:46.402+05:30  INFO 11728 --- [RetailApplication] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T11:32:46.691+05:30  INFO 11728 --- [RetailApplication] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:32:47.358+05:30  WARN 11728 --- [RetailApplication] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T11:32:48.361+05:30  INFO 11728 --- [RetailApplication] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-07T11:32:48.754+05:30  INFO 11728 --- [RetailApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-07T11:32:48.775+05:30  INFO 11728 --- [RetailApplication] [main] c.m.RetailApplication.RetailApplication  : Started RetailApplication in 13.493 seconds (process running for 14.579)
+2025-05-07T11:34:57.662+05:30  INFO 11728 --- [RetailApplication] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-07T11:34:58.871+05:30  INFO 11728 --- [RetailApplication] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-07T11:34:58.888+05:30  INFO 11728 --- [RetailApplication] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:34:58.898+05:30  INFO 11728 --- [RetailApplication] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-07T11:34:58.948+05:30  INFO 11728 --- [RetailApplication] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

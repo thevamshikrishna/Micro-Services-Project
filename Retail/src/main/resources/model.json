@@ -1,0 +1,50 @@
+{
+  "Product": {
+    "id": 101,
+    "name": "Wireless Mouse",
+    "description": "Ergonomic wireless mouse with USB receiver",
+    "price": 25.99,
+    "stock": 150
+  },
+  "User": {
+    "id": 1,
+    "name": "Alice Smith",
+    "email": "alice@example.com",
+    "address": "123 Maple Street, Springfield, USA"
+  },
+  "Cart": {
+    "userId": 1,
+    "items": [
+      {
+        "productId": 101,
+        "quantity": 2
+      }
+    ]
+  },
+  "OrderItem": {
+    "productId": 101,
+    "quantity": 2,
+    "price": 25.99
+  },
+  "Order": {
+    "orderId": 1001,
+    "userId": 1,
+    "items": [
+      {
+        "productId": 101,
+        "quantity": 2,
+        "price": 25.99
+      }
+    ],
+    "total": 51.98,
+    "status": "Processing",
+    "orderDate": "2025-04-24"
+  },
+  "Payment": {
+    "paymentId": 5001,
+    "orderId": 1001,
+    "amount": 51.98,
+    "method": "Credit Card",
+    "status": "Completed"
+  }
+}
