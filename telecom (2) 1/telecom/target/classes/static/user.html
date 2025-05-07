@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telecom User Portal</title>
+</head>
+<body>
+<h2>User Registration</h2>
+<input type="text" id="registerName" placeholder="Name">
+<input type="text" id="registerPhone" placeholder="Phone Number">
+<input type="password" id="registerPassword" placeholder="Password">
+<button onclick="registerUser()">Register</button>
+
+<h2>User Login</h2>
+<input type="text" id="loginPhone" placeholder="Phone Number">
+<input type="password" id="loginPassword" placeholder="Password">
+<button onclick="loginUser()">Login</button>
+
+<h2>View All Plans</h2>
+<button onclick="viewAllPlans()">Get Plans</button>
+<ul id="plansList"></ul>
+
+<h2>Select Plan for User</h2>
+<input type="number" id="userIdSelect" placeholder="User ID">
+<input type="number" id="planIdSelect" placeholder="Plan ID">
+<button onclick="selectPlan()">Select Plan</button>
+
+<h2>View Selected Plans for a User</h2>
+<input type="number" id="userIdViewPlan" placeholder="User ID">
+<button onclick="viewUserPlans()">View My Plans</button>
+<ul id="userPlansList"></ul>
+
+<script>
+    const BASE_URL = "http://localhost:8080/user";
+
+    function registerUser() {
+        const user = {
+            name: document.getElementById('registerName').value,
+            phoneNumber: document.getElementById('registerPhone').value,
+            password: document.getElementById('registerPassword').value
+        };
+        fetch(`${BASE_URL}/register/user`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.text())
+        .then(data => alert(data));
+    }
+
+    function loginUser() {
+        const user = {
+            phoneNumber: document.getElementById('loginPhone').value,
+            password: document.getElementById('loginPassword').value
+        };
+        fetch(`${BASE_URL}/login/user`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.text())
+        .then(data => alert(data));
+    }
+
+    function viewAllPlans() {
+        fetch(`${BASE_URL}/viewAllPlans`)
+        .then(res => res.json())
+        .then(plans => {
+            const ul = document.getElementById('plansList');
+            ul.innerHTML = "";
+            plans.forEach(plan => {
+                ul.innerHTML += `<li>${plan.name} - ₹${plan.price} for ${plan.validity} days</li>`;
+            });
+        });
+    }
+
+    function selectPlan() {
+        const userId = document.getElementById('userIdSelect').value;
+        const planId = document.getElementById('planIdSelect').value;
+        fetch(`${BASE_URL}/user/${userId}/select-plan/${planId}`, {
+            method: "POST"
+        })
+        .then(res => res.text())
+        .then(data => alert(data));
+    }
+
+    function viewUserPlans() {
+        const userId = document.getElementById('userIdViewPlan').value;
+        fetch(`${BASE_URL}/user/${userId}/view-plan`)
+        .then(res => res.json())
+        .then(userPlans => {
+            const ul = document.getElementById('userPlansList');
+            ul.innerHTML = "";
+            userPlans.forEach(up => {
+                ul.innerHTML += `<li>${up.planName} - ₹${up.price} (${up.validity} days)</li>`;
+            });
+        });
+    }
+</script>
+</body>
+</html>
